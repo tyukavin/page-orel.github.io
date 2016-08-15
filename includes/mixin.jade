@@ -1,0 +1,25 @@
+mixin point(p, alt, pos)
+  img.point(class= p src="img/point.svg" alt= alt data-block= pos)
+
+mixin tooltip(pos, name)
+  h2.point-tooltip__title(class= pos)= name
+
+mixin backgrounds(cl, id, url, text1, text2, img1, alt1, img2, alt2, img3, alt3, img4, alt4, img5, alt5, img6, alt6)
+  .background__el(id= id style= url)
+    .background__content
+      span.bg__close
+      .bg__wrapp
+        .bg__middle
+          .bg__row
+            .col__img
+              img.i1(src= img1 alt= alt1 class= cl)
+              img.i2(src= img2 alt= alt2 class= cl)
+              img.i3(src= img3 alt= alt3 class= cl)
+            .col__text= text1
+          .bg__row
+            .col__img(style="float: right;")
+              img.i4(src= img4 alt= alt4 class= cl)
+              img.i5(src= img5 alt= alt5 class= cl)
+              img.i6(src= img6 alt= alt6 class= cl)
+            .col__text= text2
+    
